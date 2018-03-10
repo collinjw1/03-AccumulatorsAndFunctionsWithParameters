@@ -4,9 +4,9 @@ in its simplest classic forms:
    SUMMING:       total = total + number
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
-
+         their colleagues and Jonathan Collins.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
+import math
 
 def main():
     """ Calls the   TEST   functions in this module. """
@@ -28,6 +28,18 @@ def run_test_sum_cosines():
     print('--------------------------------------------------')
     print('Testing the   sum_cosines   function:')
     print('--------------------------------------------------')
+    expected1 = 1
+    answer1 = sum_cosines(1)
+    print('Test 1 expected:', expected1)
+    print('       actual:  ', answer1)
+    expected2 = 1
+    answer2 = sum_cosines(3)
+    print('Test 1 expected:', expected2)
+    print('       actual:  ', answer2)
+    expected3 = 1
+    answer3 = sum_cosines(5)
+    print('Test 1 expected:', expected3)
+    print('       actual:  ', answer3)
 
 
 def sum_cosines(n):
@@ -40,8 +52,13 @@ def sum_cosines(n):
       If n is 3, this function returns
         cos(0) + cos(1) + cos(2) + cos(3)   which is about 0.13416.
     """
+    sum = 0
+    for k in range(n):
+        sum = sum + math.cos(k)
+    return sum
+
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
